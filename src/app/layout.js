@@ -1,8 +1,8 @@
 import {  Forum } from "next/font/google";
 import "./globals.css";
+import { Navbar, Footer } from "@/app/common";
 
-
-const forum = Forum({ subsets: ["latin"] });
+const forum = Forum({ subsets: ["latin"], weight: ["400"]});
 
 export const metadata = {
   title: "Luxury Trips",
@@ -13,9 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={forum.className}>
-        
+        <Navbar/>
         {children}
-        
+        <Footer/>
         </body>
     </html>
   );

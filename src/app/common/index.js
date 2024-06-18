@@ -1,0 +1,7 @@
+export { default as Buttons } from './Buttons'
+export { default as Contact } from './Contact'
+export { default as Footer } from './Footer'
+export { default as Navbar } from './Navbar'
+export { default as SearchBar } from './SearchBar'
+export { default as Slider } from './Slider'
+export { default as LuxuryPackages } from './LuxuryPackages'
