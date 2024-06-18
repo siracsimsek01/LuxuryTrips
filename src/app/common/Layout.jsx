@@ -1,15 +1,33 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 import Navbar from './Navbar';
 import Header from './Header';
 
 const Layout = ({ children }) => {
+
+  useEffect(() => {
+    // 
+  })
+
   return (
-    <div className="relative bg-cover bg-center min-h-screen" style={{ backgroundImage: "url('/path/to/your/background-image.jpg')" }}>
-      <div className="absolute inset-0 bg-black opacity-50"></div> 
-      <Navbar />
-      <Header />
-      <main className="relative z-10">
-        {children}
-      </main>
+    <div className="relative bg-cover bg-center min-h-screen">
+      <div className="absolute inset-0 header-top" style={{ backgroundImage: "url('../../../public/header-top.png')" }}></div>
+      <div className="absolute inset-0 header-bg" style={{ backgroundImage: "url('../../../public/header-bg.png')" }}></div>
+      <div className="absolute inset-0 header-bg" style={{ backgroundImage: "url('../../../public/header-fg.png')" }}></div>
+      <div className="absolute inset-0 header-bg" style={{ backgroundImage: "url('../../../public/header-bottom.png')" }}></div>
+
+      <div className="relative z-10">
+        <Navbar/>
+        <Header/>
+        <main>
+          {children}
+        </main>
+      </div>
     </div>
   );
 };
