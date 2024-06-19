@@ -3,12 +3,3 @@
 @tailwind utilities;
 
 
-@layer utilities {
-  .bg-mobile {
-    background-image: url('../assets/bg-mobile.png');
-  }
-
-  .bg-desktop {
-    background-image: url('../assets/bg-desktop.png');
-  }
-}

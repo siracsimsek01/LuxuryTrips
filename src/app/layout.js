@@ -1,6 +1,6 @@
 import {  Forum } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer } from "@/app/common";
+import { Navbar, Footer } from "@/app/components";
 
 const forum = Forum({ subsets: ["latin"], weight: ["400"]});
 
@@ -13,9 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={forum.className}>
-        <Navbar/>
         {children}
-        <Footer/>
+        {/* <Footer/> */}
         </body>
     </html>
   );
